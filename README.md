@@ -54,22 +54,27 @@ Este proyecto es una API REST desarrollada para gestionar un foro-hub, utilizand
 
 La API proporciona los siguientes endpoints principales:
 
-- **Usuarios**:
-  - `POST /usuarios`: Crear un nuevo usuario
-  - `GET /usuarios/{id}`: Obtener detalles de un usuario
-  - `PUT /usuarios/{id}`: Actualizar un usuario
-  - `DELETE /usuarios/{id}`: Eliminar un usuario
+- **Autenticación** (`AutenticacionController.java`):
+  - `POST /auth/login`: Autenticarse y obtener un token JWT.
 
-- **Foros**:
-  - `POST /foros`: Crear un nuevo foro
-  - `GET /foros/{id}`: Obtener detalles de un foro
-  - `PUT /foros/{id}`: Actualizar un foro
-  - `DELETE /foros/{id}`: Eliminar un foro
+- **Cursos** (`CursoController.java`):
+  - `POST /cursos`: Crear un nuevo curso.
+  - `GET /cursos/{id}`: Obtener detalles de un curso.
+  - `PUT /cursos/{id}`: Actualizar un curso.
+  - `DELETE /cursos/{id}`: Eliminar un curso.
+  - `GET /cursos`: Listar todos los cursos.
 
-- **Mensajes**:
-  - `POST /foros/{foroId}/mensajes`: Crear un nuevo mensaje en un foro
-  - `GET /foros/{foroId}/mensajes`: Listar mensajes de un foro
-  - `DELETE /mensajes/{id}`: Eliminar un mensaje
+- **Respuestas** (`RespuestaController.java`):
+  - `POST /topicos/{topicoId}/respuestas`: Crear una nueva respuesta en un tópico.
+  - `GET /topicos/{topicoId}/respuestas`: Listar respuestas de un tópico.
+  - `DELETE /respuestas/{id}`: Eliminar una respuesta.
+
+- **Tópicos** (`TopicoController.java`):
+  - `POST /topicos`: Crear un nuevo tópico.
+  - `GET /topicos/{id}`: Obtener detalles de un tópico.
+  - `PUT /topicos/{id}`: Actualizar un tópico.
+  - `DELETE /topicos/{id}`: Eliminar un tópico.
+  - `GET /topicos`: Listar todos los tópicos.
 
 ## Autenticación y Seguridad
 
@@ -90,11 +95,6 @@ Las contribuciones son bienvenidas. Para contribuir, por favor, sigue estos paso
 5. Sube tus cambios (`git push origin feature/nueva-caracteristica`).
 6. Abre un Pull Request.
 
-## Licencia
-
-Este proyecto está licenciado bajo la Licencia MIT. Para más detalles, consulta el archivo [LICENSE](LICENSE).
-
 ---
 
 Proyecto desarrollado como parte del Programa ONE de Alura Latam.
-
